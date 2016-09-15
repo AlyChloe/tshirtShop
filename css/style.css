@@ -1,0 +1,101 @@
+/********* General *********/
+* {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  color: #65aada;
+}
+.container {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;
+}
+.content, .fa-undo {
+  border: #65aada solid 2.5px;
+  border-radius: 2px;
+}
+ul li {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+}
+th {
+  border-right: #65aada solid 2.5px;
+  padding: 10px;
+}
+tr {
+  border-top: #65aada solid 2.5px;
+}
+.links {
+  width: 101%;
+}
+.square {
+  width: 16px;
+  height: 16px;
+  margin: 0 auto;
+}
+.pink .square {
+  background-color: #d382aa;
+}
+.blue .square {
+  background-color: #65aada;
+}
+.yellow .square {
+  background-color: #dcb07d;
+}
+.blue, .pink, .yellow {
+  float: left;
+  width: 28%;
+  margin-right: 40px;
+  position: relative;
+}
+li img {
+  width: 100%;
+  padding: 15px;
+}
+.fa-undo {
+  position: absolute;
+  right: 0;
+  padding: 5px;
+  top: 0;
+}
+.fa, th {
+  text-align: center;
+  color: #65aada;
+}
+.fa-heart-o {
+  font-weight: bold;
+}
+table .fa, table {
+  font-size: 14px;
+}
+.name-pricing {
+  position: relative;
+  width: 100%;
+  height: 50px;
+}
+p, h5{
+  position: absolute;
+}
+p {
+  left: 0;
+  font-size: 20px;
+}
+h5 {
+  right: 0;
+  top: -13px;
+  font-size: 20px;
+  font-weight: 900;
+}
+/********* Hover ********/
+  th:hover, th:hover .fa, .fa-undo:hover {
+    background: #65aada;
+    color: white;
+    cursor: pointer;
+  }
+  th:hover th.square {
+    background: #65aada;
+  }
+  th:hover .square {
+    background: white;
+  }
