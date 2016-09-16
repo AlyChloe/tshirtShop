@@ -27,7 +27,7 @@ tr {
   border-top: #65aada solid 2.5px;
 }
 .links {
-  width: 101%;
+  width: 100%;
 }
 .square {
   width: 16px;
@@ -88,6 +88,72 @@ h5 {
   font-weight: 900;
 }
 /********* Hover ********/
+  .size-hover {
+    position: absolute;
+    bottom: 50px;
+    left: 6px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 6px #adadad;
+    display: none;
+  }
+  .xl-hover {
+    position: relative;
+  }
+  .s {
+    font-size: 20px;
+  }
+  .s:after {
+    content: 's';
+    font-size: 14px;
+    position: absolute;
+    left: 26px;
+    top: 89px;
+  }
+  .m:after {
+    content: 'm';
+    font-size: 14px;
+    left: 23px;
+    top: 66px;
+    position: absolute;
+  }
+  .l:after {
+    content: 'l';
+    font-size: 14px;
+    position: absolute;
+    left: 27px;
+    top: 43px;
+  }
+  .xl:after {
+    content: 'xl';
+    font-size: 14px;
+    position: absolute;
+    left: 23px;
+    top: 16px;
+  }
+  .m {
+    font-size: 24px;
+  }
+  .l {
+    font-size: 26px;
+  }
+  .xl {
+    font-size: 28px;
+  }
+  .arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #f00;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid #fff;
+    position: absolute;
+    bottom: -7px;
+    left: 22px;
+  }
   th:hover, th:hover .fa, .fa-undo:hover {
     background: #65aada;
     color: white;
@@ -98,4 +164,10 @@ h5 {
   }
   th:hover .square {
     background: white;
+  }
+  .icon-t-shirt {
+    display: block;
+  }
+  th.xl-hover:hover .size-hover {
+    display: block;
   }
