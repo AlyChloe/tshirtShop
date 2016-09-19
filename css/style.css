@@ -1,4 +1,6 @@
-/********* General *********/
+/********************
+General
+*********************/
 * {
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
@@ -9,9 +11,33 @@
   margin: 0 auto;
   width: 100%;
 }
-.content, .fa-undo {
+.content, .fa-undo, .size-hover, .box-hover {
   border: #65aada solid 2.5px;
   border-radius: 2px;
+}
+th:hover, th:hover .fa, .fa-undo:hover, th:hover th.square, .blue .square, .blue-box {
+  background: #65aada;
+}
+/********************
+Positioning
+*********************/
+.tshirts, .blue, .pink, .yellow, .blue, .pink, .yellow, .name-pricing, .xl-hover {
+  position: relative;
+}
+p, h5, .fa-undo, .box-hover, .size-hover, .size-hover i:after, .arrow-down {
+  position: absolute;
+}
+/********************
+Tshirts
+*********************/
+.tshirts, .blue, .pink, .yellow {
+  float: left;
+}
+.tshirts {
+  left: 50%;
+}
+.content {
+  overflow: auto;
 }
 ul li {
   list-style: none;
@@ -21,40 +47,42 @@ table {
 }
 th {
   border-right: #65aada solid 2.5px;
-  padding: 10px;
+  padding: 15px 0;
 }
 tr {
   border-top: #65aada solid 2.5px;
 }
 .links {
-  width: 100%;
+  table-layout: fixed;
+  width: 101%;
 }
-.square {
+.square, .pink-box, .blue-box, .yellow-box, .green-box {
   width: 16px;
   height: 16px;
   margin: 0 auto;
+  display: inline-block;
+  margin-right: 2px;
 }
-.pink .square {
+.pink .square, .pink-box {
   background-color: #d382aa;
 }
-.blue .square {
-  background-color: #65aada;
-}
-.yellow .square {
+.yellow .square, .yellow-box {
   background-color: #dcb07d;
+}
+.green-box {
+  background: #8bb992;
 }
 .blue, .pink, .yellow {
   float: left;
   width: 28%;
   margin-right: 40px;
-  position: relative;
+  left: -50%;
 }
 li img {
   width: 100%;
   padding: 15px;
 }
 .fa-undo {
-  position: absolute;
   right: 0;
   padding: 5px;
   top: 0;
@@ -70,12 +98,8 @@ table .fa, table {
   font-size: 14px;
 }
 .name-pricing {
-  position: relative;
   width: 100%;
   height: 50px;
-}
-p, h5{
-  position: absolute;
 }
 p {
   left: 0;
@@ -87,48 +111,54 @@ h5 {
   font-size: 20px;
   font-weight: 900;
 }
-/********* Hover ********/
-  .size-hover {
-    position: absolute;
-    bottom: 50px;
-    left: 6px;
+/**************************
+Hidden Hover Elements
+***************************/
+  .box-hover {
+    bottom: 105px;
+    right: 71px;
+  }
+  .box-hover, .size-hover {
     background: #fff;
     padding: 10px;
     border-radius: 3px;
-    box-shadow: 1px 1px 6px #adadad;
-    display: none;
+    visibility: hidden;
+    transition: all .2s ease;
+    transform-origin: bottom right;
+    opacity: 1;
   }
-  .xl-hover {
-    position: relative;
+  .size-hover {
+    bottom: 53px;
+    left: 2px;
+  }
+  .xl-hover, .square {
+    transition: all .5s ease;
   }
   .s {
     font-size: 20px;
   }
+  .size-hover i:after {
+    font-style: normal;
+    font-size: 14px;
+  }
   .s:after {
     content: 's';
-    font-size: 14px;
-    position: absolute;
     left: 26px;
     top: 89px;
   }
   .m:after {
     content: 'm';
-    font-size: 14px;
-    left: 23px;
+    left: 24px;
+    font-size: 13px;
     top: 66px;
-    position: absolute;
   }
   .l:after {
     content: 'l';
-    font-size: 14px;
-    position: absolute;
-    left: 27px;
+    left: 28px;
     top: 43px;
   }
   .xl:after {
     content: 'xl';
-    font-size: 14px;
-    position: absolute;
     left: 23px;
     top: 16px;
   }
@@ -150,17 +180,15 @@ h5 {
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
     border-top: 7px solid #fff;
-    position: absolute;
     bottom: -7px;
     left: 22px;
   }
+  /************************
+  Hover
+  *************************/
   th:hover, th:hover .fa, .fa-undo:hover {
-    background: #65aada;
     color: white;
     cursor: pointer;
-  }
-  th:hover th.square {
-    background: #65aada;
   }
   th:hover .square {
     background: white;
@@ -168,6 +196,8 @@ h5 {
   .icon-t-shirt {
     display: block;
   }
-  th.xl-hover:hover .size-hover {
-    display: block;
+  th.xl-hover:hover .size-hover, th:nth-child(4):hover .box-hover {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0, 6px);
   }
