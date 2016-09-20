@@ -1,10 +1,15 @@
 /********************
 General
 *********************/
-* {
+*, *:before, *:after {
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
   color: #65aada;
+}
+main {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
 }
 .container {
   overflow: hidden;
@@ -21,26 +26,38 @@ th:hover, th:hover .fa, .fa-undo:hover, th:hover th.square, .blue .square, .blue
 /********************
 Positioning
 *********************/
-.tshirts, .blue, .pink, .yellow, .blue, .pink, .yellow, .name-pricing, .xl-hover {
+.tshirts, ul li, .name-pricing, .xl-hover, .content {
   position: relative;
 }
 p, h5, .fa-undo, .box-hover, .size-hover, .size-hover i:after, .arrow-down {
   position: absolute;
 }
 /********************
+Nav
+*********************/
+nav {
+  overflow: hidden;
+  padding-left: 0;
+}
+nav ul {
+  float: left;
+  width: 100%;
+}
+nav ul li {
+  float: right;
+  text-align: center;
+  width: 15px;
+}
+/********************
 Tshirts
 *********************/
-.tshirts, .blue, .pink, .yellow {
+ul li {
   float: left;
-}
-.tshirts {
-  left: 50%;
+  list-style: none;
+  width: 25%;
 }
 .content {
   overflow: auto;
-}
-ul li {
-  list-style: none;
 }
 table {
   border-collapse: collapse;
@@ -69,23 +86,20 @@ tr {
 .yellow .square, .yellow-box {
   background-color: #dcb07d;
 }
-.green-box {
+.green-box, .green .square {
   background: #8bb992;
 }
-.blue, .pink, .yellow {
-  float: left;
-  width: 28%;
-  margin-right: 40px;
-  left: -50%;
+ul li {
+  padding-right: 30px;
 }
 li img {
   width: 100%;
   padding: 15px;
 }
 .fa-undo {
-  right: 0;
+  right: -2px;
   padding: 5px;
-  top: 0;
+  top: -2px;
 }
 .fa, th {
   text-align: center;
@@ -115,21 +129,23 @@ h5 {
 Hidden Hover Elements
 ***************************/
   .box-hover {
-    bottom: 105px;
-    right: 71px;
+    bottom: 53px;
+    right: 44px;
+    width: 63px;
   }
   .box-hover, .size-hover {
     background: #fff;
-    padding: 10px;
+    padding: 10px 4px;
     border-radius: 3px;
-    visibility: hidden;
     transition: all .2s ease;
     transform-origin: bottom right;
-    opacity: 1;
+    opacity: 0;
+
   }
   .size-hover {
     bottom: 53px;
-    left: 2px;
+    padding: 7px 0;
+    width: 100%;
   }
   .xl-hover, .square {
     transition: all .5s ease;
@@ -143,23 +159,23 @@ Hidden Hover Elements
   }
   .s:after {
     content: 's';
-    left: 26px;
-    top: 89px;
+    left: 20px;
+    top: 106px;
   }
   .m:after {
     content: 'm';
-    left: 24px;
+    left: 17px;
     font-size: 13px;
-    top: 66px;
+    top: 78px;
   }
   .l:after {
     content: 'l';
-    left: 28px;
-    top: 43px;
+    left: 20px;
+    top: 49px;
   }
   .xl:after {
     content: 'xl';
-    left: 23px;
+    left: 18px;
     top: 16px;
   }
   .m {
@@ -181,7 +197,7 @@ Hidden Hover Elements
     border-right: 7px solid transparent;
     border-top: 7px solid #fff;
     bottom: -7px;
-    left: 22px;
+    left: 17px;
   }
   /************************
   Hover
@@ -195,9 +211,42 @@ Hidden Hover Elements
   }
   .icon-t-shirt {
     display: block;
+    padding: 3px;
   }
   th.xl-hover:hover .size-hover, th:nth-child(4):hover .box-hover {
-    visibility: visible;
     opacity: 1;
     transform: translate(0, 6px);
   }
+
+@media only screen and (max-width:975px) {
+  .tshirts {
+    padding-left: 30px;
+  }
+  ul li {
+    float: none;
+    display: inline-block;
+    width: 33%;
+    padding-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width:750px) {
+  .tshirts {
+    transform: translateX(0);
+  }
+  ul li {
+    display: inline-block;
+    width: 49%;
+    padding: 0 20px 20px;
+  }
+  .tshirts {
+    padding-left: 0;
+  }
+}
+
+@media only screen and (max-width:475px) {
+  ul li {
+    display: inline-block;
+    width: 100%;
+  }
+}
