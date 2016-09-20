@@ -7,12 +7,13 @@ General
   color: #65aada;
 }
 main {
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+}
+main, .container {
+  overflow: hidden;
 }
 .container {
-  overflow: hidden;
   margin: 0 auto;
   width: 100%;
 }
@@ -38,15 +39,17 @@ Nav
 nav {
   overflow: hidden;
   padding-left: 0;
+  float: left;
+  width: 60%;
+  transform: translateX(34%);
+  padding-bottom: 30px;
 }
 nav ul {
-  float: left;
+  float: right;
   width: 100%;
 }
 nav ul li {
-  float: right;
   text-align: center;
-  width: 15px;
 }
 /********************
 Tshirts
@@ -78,7 +81,6 @@ tr {
   height: 16px;
   margin: 0 auto;
   display: inline-block;
-  margin-right: 2px;
 }
 .pink .square, .pink-box {
   background-color: #d382aa;
@@ -91,6 +93,7 @@ tr {
 }
 ul li {
   padding-right: 30px;
+  padding-bottom: 20px;
 }
 li img {
   width: 100%;
@@ -129,9 +132,9 @@ h5 {
 Hidden Hover Elements
 ***************************/
   .box-hover {
-    bottom: 53px;
-    right: 44px;
-    width: 63px;
+    bottom: 37px;
+    right: -22px;
+    width: 370%;
   }
   .box-hover, .size-hover {
     background: #fff;
@@ -140,7 +143,9 @@ Hidden Hover Elements
     transition: all .2s ease;
     transform-origin: bottom right;
     opacity: 0;
-
+  }
+  .square {
+    position: relative;
   }
   .size-hover {
     bottom: 53px;
@@ -197,7 +202,12 @@ Hidden Hover Elements
     border-right: 7px solid transparent;
     border-top: 7px solid #fff;
     bottom: -7px;
-    left: 17px;
+  }
+  .xl-hover .arrow-down {
+    left: 21px;
+  }
+  .square .arrow-down {
+    left: 21px;
   }
   /************************
   Hover
@@ -226,7 +236,9 @@ Hidden Hover Elements
     float: none;
     display: inline-block;
     width: 33%;
-    padding-bottom: 20px;
+  }
+  nav {
+    display: none;
   }
 }
 
